@@ -1,6 +1,7 @@
 import React from 'react';
 import { MapPin, Phone, Mail, Clock, ExternalLink, Sparkles, Heart } from 'lucide-react';
 import { maujiData } from '../data/maujiData';
+import { publicAsset } from '../utils/publicAsset';
 
 export default function LocationsStory({ activeCity, setActiveCity }) {
   const currentCity = maujiData.locations[activeCity];
@@ -35,7 +36,7 @@ export default function LocationsStory({ activeCity, setActiveCity }) {
             {/* Founder Profile Card */}
             <div className="p-4 rounded-2xl bg-[#F7F4EB] border border-[#EBE6DC] flex items-center gap-4">
               <img
-                src="/images/founder-portrait.png"
+                src={publicAsset('images/founder-portrait.png')}
                 alt="Vandit Purohit"
                 className="w-14 h-14 rounded-full object-cover border-2 border-[#D97706] shadow-sm"
               />
@@ -59,7 +60,7 @@ export default function LocationsStory({ activeCity, setActiveCity }) {
           <div className="lg:col-span-6 relative">
             {/* Real Mauji Deck Stamp */}
             <img
-              src="/images/deck-badge-2.png"
+              src={publicAsset('images/deck-badge-2.png')}
               alt="Mauji Deck"
               className="absolute -top-8 -right-6 w-20 h-auto z-20 pointer-events-none drop-shadow-md hidden sm:block rotate-6"
             />
@@ -68,7 +69,7 @@ export default function LocationsStory({ activeCity, setActiveCity }) {
               <div className="space-y-3.5">
                 <div className="rounded-2xl overflow-hidden shadow-soft border border-[#EBE6DC] group">
                   <img
-                    src="/images/mauji-ambiance-vase.jpg"
+                    src={publicAsset('images/mauji-ambiance-vase.jpg')}
                     alt="Mauji Signature Corner"
                     loading="lazy"
                     decoding="async"
@@ -81,7 +82,7 @@ export default function LocationsStory({ activeCity, setActiveCity }) {
 
                 <div className="rounded-2xl overflow-hidden shadow-soft border border-[#EBE6DC] group">
                   <img
-                    src="/images/gallery-1.png"
+                    src={publicAsset('images/gallery-1.png')}
                     alt="Mauji Community Lounge"
                     loading="lazy"
                     decoding="async"
@@ -96,7 +97,7 @@ export default function LocationsStory({ activeCity, setActiveCity }) {
               <div className="space-y-3.5 pt-6">
                 <div className="rounded-2xl overflow-hidden shadow-soft border border-[#EBE6DC] group">
                   <img
-                    src="/images/gallery-2.png"
+                    src={publicAsset('images/gallery-2.png')}
                     alt="Mauji Cozy Nooks"
                     loading="lazy"
                     decoding="async"
@@ -109,7 +110,7 @@ export default function LocationsStory({ activeCity, setActiveCity }) {
 
                 <div className="rounded-2xl overflow-hidden shadow-soft border border-[#EBE6DC] group">
                   <img
-                    src="/images/gallery-3.png"
+                    src={publicAsset('images/gallery-3.png')}
                     alt="Mauji Ambiance"
                     loading="lazy"
                     decoding="async"

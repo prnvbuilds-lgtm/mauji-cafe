@@ -7,34 +7,35 @@ import {
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { maujiData } from '../data/maujiData';
+import { publicAsset } from '../utils/publicAsset';
 
 const GALLERY_MOMENTS = [
   {
-    image: '/images/gallery-1.png',
+    image: publicAsset('images/gallery-1.png'),
     caption: 'Sunlit Reading Sanctuary',
     location: 'Pune Flagship',
     tag: '#SlowMornings'
   },
   {
-    image: '/images/gallery-2.png',
+    image: publicAsset('images/gallery-2.png'),
     caption: 'Artisanal Pour-Over & Brew Bar',
     location: 'Open Coffee Lab',
     tag: '#UnlimitedCraft'
   },
   {
-    image: '/images/gallery-3.png',
+    image: publicAsset('images/gallery-3.png'),
     caption: 'Collaborative Creator Hub',
     location: 'Maker Desks',
     tag: '#DeepWork'
   },
   {
-    image: '/images/gallery-4.png',
+    image: publicAsset('images/gallery-4.png'),
     caption: 'Acoustic Evenings & Open Mics',
     location: 'Courtyard Stage',
     tag: '#MaujiVibes'
   },
   {
-    image: '/images/mauji-ambiance-vase.jpg',
+    image: publicAsset('images/mauji-ambiance-vase.jpg'),
     caption: 'Botanical Courtyard Nooks',
     location: 'Nagpur & Pune',
     tag: '#ThirdSpace'
@@ -42,10 +43,10 @@ const GALLERY_MOMENTS = [
 ];
 
 const PRESS_BADGES = [
-  { name: 'Times of India', src: '/images/press-toi.png', quote: 'India’s pioneer in the time-cafe revolution' },
-  { name: 'The Indian Express', src: '/images/press-indian-express.png', quote: 'A judgment-free creative haven for unhurried minds' },
-  { name: 'LBB', src: '/images/press-lbb.png', quote: 'Best coworking & artisanal cafe in Maharashtra' },
-  { name: 'WhatsHot', src: '/images/press-whatshot.png', quote: 'Where work meets soul, coffee & boundless community' }
+  { name: 'Times of India', src: publicAsset('images/press-toi.png'), quote: 'India’s pioneer in the time-cafe revolution' },
+  { name: 'The Indian Express', src: publicAsset('images/press-indian-express.png'), quote: 'A judgment-free creative haven for unhurried minds' },
+  { name: 'LBB', src: publicAsset('images/press-lbb.png'), quote: 'Best coworking & artisanal cafe in Maharashtra' },
+  { name: 'WhatsHot', src: publicAsset('images/press-whatshot.png'), quote: 'Where work meets soul, coffee & boundless community' }
 ];
 
 export default function Footer() {
@@ -159,7 +160,7 @@ export default function Footer() {
           {/* Subtle Decorative Spinning Stamp in Background - CSS spin */}
           <div className="absolute -right-8 -bottom-8 w-48 h-48 opacity-10 pointer-events-none">
             <img 
-              src="/images/deck-badge-2.png" 
+              src={publicAsset('images/deck-badge-2.png')}
               alt="Mauji Emblem" 
               loading="lazy"
               decoding="async"
@@ -388,12 +389,12 @@ export default function Footer() {
           <div className="col-span-2 md:col-span-4 space-y-4 pr-0 md:pr-6">
             <div className="flex items-center gap-3">
               <img 
-                src="/images/mauji-logo.png" 
+                src={publicAsset('images/mauji-logo.png')}
                 alt="Mauji Logo" 
                 className="h-10 w-auto object-contain brightness-110 drop-shadow-md"
               />
               <img 
-                src="/images/mauji-hindi.png" 
+                src={publicAsset('images/mauji-hindi.png')}
                 alt="माउजी" 
                 className="h-7 w-auto object-contain opacity-90 invert"
               />

@@ -6,6 +6,7 @@ import {
   Star, ChevronRight, MapPin
 } from 'lucide-react';
 import { maujiData } from '../data/maujiData';
+import { publicAsset } from '../utils/publicAsset';
 
 export default function Hero({ activeCity, onOpenBooking, onOpenSimulate }) {
   const currentCity = maujiData.locations[activeCity] || maujiData.locations.pune;
@@ -273,7 +274,7 @@ export default function Hero({ activeCity, onOpenBooking, onOpenSimulate }) {
 
                 {/* Floating Brand Swirl - CSS spin on compositor thread */}
                 <img
-                  src="/images/mauji-swirl-icon.png"
+                  src={publicAsset('images/mauji-swirl-icon.png')}
                   alt="Mauji Swirl"
                   loading="lazy"
                   decoding="async"
@@ -282,7 +283,7 @@ export default function Hero({ activeCity, onOpenBooking, onOpenSimulate }) {
 
                 {/* Floating Sketch Triangle Accent - CSS float */}
                 <img
-                  src="/images/mauji-triangle-accent.png"
+                  src={publicAsset('images/mauji-triangle-accent.png')}
                   alt="Mauji Accent"
                   loading="lazy"
                   decoding="async"

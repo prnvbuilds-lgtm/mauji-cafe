@@ -6,6 +6,7 @@ import {
 } from 'lucide-react';
 import TimeCalculator from '../components/TimeCalculator';
 import { maujiData } from '../data/maujiData';
+import { publicAsset } from '../utils/publicAsset';
 
 export default function TimeCafePage({ activeCity, onOpenBooking, onOpenSimulate }) {
   const currentCity = maujiData.locations[activeCity] || maujiData.locations.pune;
@@ -98,7 +99,7 @@ export default function TimeCafePage({ activeCity, onOpenBooking, onOpenSimulate
             <div className="lg:col-span-5">
               <div className="relative rounded-3xl overflow-hidden border-2 border-[#EBE6DC] shadow-xl bg-white p-2">
                 <img 
-                  src="/images/coffee-pour.png" 
+                  src={publicAsset('images/mauji-ambiance-vase.jpg')}
                   alt="Artisanal Pour Over Coffee at Mauji" 
                   className="w-full h-80 sm:h-96 object-cover rounded-2xl" 
                 />

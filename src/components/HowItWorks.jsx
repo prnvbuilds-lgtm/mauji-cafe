@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { QrCode, Coffee, CreditCard, Sparkles, Play, Square, RefreshCw, CheckCircle2, Wifi, BellRing } from 'lucide-react';
+import { publicAsset } from '../utils/publicAsset';
 
 export default function HowItWorks() {
   // Live Simulation state
@@ -73,7 +74,7 @@ export default function HowItWorks() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3 relative">
           <img
-            src="/images/deck-badge-1.png"
+            src={publicAsset('images/deck-badge-1.png')}
             alt="Mauji Stamp"
             className="absolute -top-6 right-4 sm:right-10 w-16 h-auto pointer-events-none opacity-80 rotate-12 hidden sm:block"
           />

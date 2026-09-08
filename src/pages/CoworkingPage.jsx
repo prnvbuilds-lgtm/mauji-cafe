@@ -6,6 +6,7 @@ import {
 } from 'lucide-react';
 import CoworkingBooking from '../components/CoworkingBooking';
 import { maujiData } from '../data/maujiData';
+import { publicAsset } from '../utils/publicAsset';
 
 export default function CoworkingPage({ activeCity, setActiveCity, onOpenBooking }) {
   const currentCity = maujiData.locations[activeCity] || maujiData.locations.pune;
@@ -103,7 +104,7 @@ export default function CoworkingPage({ activeCity, setActiveCity, onOpenBooking
             <div className="lg:col-span-5">
               <div className="relative rounded-3xl overflow-hidden border-2 border-[#EBE6DC] shadow-xl bg-white p-2">
                 <img 
-                  src="/images/gallery-1.png" 
+                  src={publicAsset('images/gallery-1.png')}
                   alt="Mauji Coworking Sanctuary" 
                   className="w-full h-80 sm:h-96 object-cover rounded-2xl" 
                 />

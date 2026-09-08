@@ -6,6 +6,7 @@ import {
   MessageSquare, Star, ChevronRight, Zap, Phone
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
+import { publicAsset } from '../utils/publicAsset';
 
 export default function CoworkingBooking({ activeCity, setActiveCity }) {
   const [selectedDesk, setSelectedDesk] = useState('hot-desk');
@@ -32,7 +33,7 @@ export default function CoworkingBooking({ activeCity, setActiveCity }) {
       rateWeek: 4045,
       rateMonth: 10000,
       badge: 'Most Popular',
-      image: '/images/gallery-1.png',
+      image: publicAsset('images/gallery-1.png'),
       desc: 'Flexible ergonomic seating anywhere in our shared garden courtyard or library. Includes unlimited specialty coffees & teas.',
       features: ['Power at every single desk', '300 Mbps symmetrical fiber', 'Unlimited artisanal brews (₹0)', 'Access to phone call booths'],
       spotsLeft: 6
@@ -45,7 +46,7 @@ export default function CoworkingBooking({ activeCity, setActiveCity }) {
       rateWeek: 5395,
       rateMonth: 12500,
       badge: 'Ergonomic Choice',
-      image: '/images/gallery-2.png',
+      image: publicAsset('images/gallery-2.png'),
       desc: 'Your reserved fixed desk every single day with high-end ergonomic mesh chair and personal locker space.',
       features: ['Fixed personal desk space', 'High-back ergonomic mesh chair', 'Lockable pedestal drawer', 'Priority meeting room credit'],
       spotsLeft: 3
@@ -58,7 +59,7 @@ export default function CoworkingBooking({ activeCity, setActiveCity }) {
       rateWeek: 8100,
       rateMonth: 16000,
       badge: 'Video Call Ready',
-      image: '/images/mauji-ambiance-vase.jpg',
+      image: publicAsset('images/mauji-ambiance-vase.jpg'),
       desc: 'Sound-dampened private booth. Ideal for confidential client calls, video podcasts, and deep coding sprints.',
       features: ['Acoustic sound dampening panels', 'Adjustable softbox lighting', 'Built-in USB-C docking hub', 'Zero acoustic interference'],
       spotsLeft: 2
@@ -71,7 +72,7 @@ export default function CoworkingBooking({ activeCity, setActiveCity }) {
       rateWeek: 16200,
       rateMonth: 38000,
       badge: 'Team Sprint',
-      image: '/images/gallery-3.png',
+      image: publicAsset('images/gallery-3.png'),
       desc: 'Private collaborative team suite equipped with a 55" 4K presentation screen, magnetic glass whiteboard, and beverage service.',
       features: ['Seats up to 6 team members', '55" 4K wireless casting display', 'Magnetic glass whiteboard', 'Dedicated barista tea service'],
       spotsLeft: 1

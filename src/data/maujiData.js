@@ -1,3 +1,5 @@
+import { publicAsset } from '../utils/publicAsset';
+
 export const maujiData = {
   brand: {
     name: "Mauji Time Cafe & Spaces",
@@ -57,7 +59,7 @@ export const maujiData = {
       description: "Step into an unhurried haven. No waiters hovering, no rush to reorder just to keep your seat. Your hourly pass covers unlimited specialty cappuccinos, pour-overs, iced teas, and savory nibbles.",
       pricing: "₹210 / hour",
       perks: ["Unlimited hot & cold craft beverages", "Complimentary freshly baked bites", "Zero waiter interruption", "BYO food friendly"],
-      image: "/images/mauji-ambiance-vase.jpg"
+      image: publicAsset('images/mauji-ambiance-vase.jpg')
     },
     {
       id: "workspace",
@@ -68,7 +70,7 @@ export const maujiData = {
       description: "Ergonomic seating, redundant high-speed fiber Wi-Fi, surge-protected charging ports at every seat, and both quiet focus corners and collaborative communal tables.",
       pricing: "From ₹899 / day or ₹10,000 / month",
       perks: ["300 Mbps symmetrical fiber line", "Power plugs at every desk", "Quiet call pods available", "Daily artisanal snacks included"],
-      image: "/images/gallery-1.png"
+      image: publicAsset('images/gallery-1.png')
     },
     {
       id: "studio",
@@ -101,7 +103,7 @@ export const maujiData = {
       description: "A permanent boutique marketplace where local artists exhibit and sell their handmade art, prints, ceramics, organic candles, and curated zines.",
       pricing: "Boutique collection",
       perks: ["100% locally sourced artwork", "Hand-poured candles & stationery", "Zero platform middleman fee for artists", "New artist popups every month"],
-      image: "/images/gallery-4.png"
+      image: publicAsset('images/gallery-4.png')
     },
     {
       id: "library",
@@ -123,7 +125,7 @@ export const maujiData = {
       description: "Get your hands dirty! Our maker space offers pottery wheels, sculpting tools, craft papers, and raw materials. Beginner-friendly guided workshops hosted every weekend.",
       pricing: "Workshop & walk-in access",
       perks: ["Electric pottery wheels & clay sets", "Sculpting tools & carving knives", "Weekend artist-led classes", "All beginner-level friendly"],
-      image: "/images/gallery-2.png"
+      image: publicAsset('images/gallery-2.png')
     },
     {
       id: "kitchen",
@@ -134,7 +136,7 @@ export const maujiData = {
       description: "Fresh artisanal sourdough toasts, wholesome grain bowls, and handcrafted pastas. And remember: Mauji proudly allows you to bring home tiffins or order Swiggy right to your table!",
       pricing: "A-la-carte menu & BYO food",
       perks: ["Artisanal sourdough & pasta", "Wholesome ingredient sourcing", "Zero corkage on BYO food & tiffins", "Orders delivered straight to table"],
-      image: "/images/gallery-3.png"
+      image: publicAsset('images/gallery-3.png')
     }
   ],
   pricingTiers: [
@@ -265,22 +267,22 @@ export const maujiData = {
     {
       source: "The Times of India",
       quote: "Mauji is revolutionizing cafe culture with its radical pay-by-the-hour anti-cafe model.",
-      logoImage: "/images/press-toi.png"
+      logoImage: publicAsset('images/press-toi.png')
     },
     {
       source: "The Indian Express",
       quote: "A true sanctuary for creators, writers, and slow-living enthusiasts who value freedom over haste.",
-      logoImage: "/images/press-indian-express.png"
+      logoImage: publicAsset('images/press-indian-express.png')
     },
     {
       source: "LBB (Little Black Book)",
       quote: "Pune's biggest time cafe where your thoughts flow freely over endless cappuccinos.",
-      logoImage: "/images/press-lbb.png"
+      logoImage: publicAsset('images/press-lbb.png')
     },
     {
       source: "WhatsHot Pune",
       quote: "An aesthetic paradise combining coworking, podcast studios, and heartwarming weekend events.",
-      logoImage: "/images/press-whatshot.png"
+      logoImage: publicAsset('images/press-whatshot.png')
     }
   ],
 

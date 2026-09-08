@@ -7,6 +7,7 @@ import {
   ShieldCheck, Heart, Compass, BookOpen
 } from 'lucide-react';
 import { maujiData } from '../data/maujiData';
+import { publicAsset } from '../utils/publicAsset';
 
 export default function Navbar({ activeCity, setActiveCity, onOpenBooking, onOpenSimulate }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -328,13 +329,13 @@ export default function Navbar({ activeCity, setActiveCity, onOpenBooking, onOpe
                 <motion.img
                   whileHover={{ scale: 1.04 }}
                   transition={{ type: "spring", stiffness: 400, damping: 20 }}
-                  src="/images/mauji-logo.png"
+                  src={publicAsset('images/mauji-logo.png')}
                   alt="Mauji The Time Cafe"
                   className="h-8 sm:h-9 lg:h-10 w-auto object-contain drop-shadow-xs"
                 />
                 <div className="w-px h-5 sm:h-6 bg-[#EBE6DC]" />
                 <img
-                  src="/images/mauji-hindi.png"
+                  src={publicAsset('images/mauji-hindi.png')}
                   alt="मौजी"
                   className="h-4 sm:h-5 lg:h-5.5 w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity"
                 />
