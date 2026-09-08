@@ -3,8 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { 
   MapPin, Clock, Menu, X, Coffee, Calendar, Phone, Sparkles, 
-  Laptop, ChevronDown, ChevronRight, MessageCircle, ExternalLink,
-  ShieldCheck, Heart, Compass, BookOpen
+  Laptop, ChevronDown, ChevronRight, MessageCircle,
+  ShieldCheck, Heart, Compass
 } from 'lucide-react';
 import { maujiData } from '../data/maujiData';
 import { publicAsset } from '../utils/publicAsset';
@@ -24,7 +24,7 @@ export default function Navbar({ activeCity, setActiveCity, onOpenBooking, onOpe
     const handleScroll = () => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
-          setScrolled(window.scrollY > 20);
+          setScrolled(window.scrollY > 15);
           ticking = false;
         });
         ticking = true;
@@ -116,25 +116,25 @@ export default function Navbar({ activeCity, setActiveCity, onOpenBooking, onOpe
   return (
     <header className={`sticky top-0 z-50 transition-all duration-300 ${
       scrolled 
-        ? 'bg-[#FFFDF9]/95 backdrop-blur-xl border-b border-[#EBE6DC] shadow-sm' 
-        : 'bg-[#FFFDF9]/92 backdrop-blur-md border-b border-[#EBE6DC]/80'
+        ? 'bg-[#FFFDF9]/95 backdrop-blur-xl border-b border-[#EBE6DC]/80 shadow-xs' 
+        : 'bg-[#FFFDF9] border-b border-transparent'
     }`}>
       
       {/* ========================================================= */}
       {/* TOP MICRO BAR: Status, City Tagline & Direct Hotline      */}
       {/* ========================================================= */}
-      <div className="bg-[#1C1815] text-[#FFFDF9] text-[11px] sm:text-xs py-1.5 px-4 sm:px-8 border-b border-neutral-800">
-        <div className="max-w-7xl mx-auto flex items-center justify-between gap-3">
+      <div className="bg-[#1C1815] text-[#FFFDF9] text-[11px] sm:text-xs py-1.5 px-3 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto flex items-center justify-between gap-2">
           
           {/* Left Status & Operating Hours */}
-          <div className="flex items-center gap-3 text-neutral-300 text-[10px] sm:text-xs shrink-0">
+          <div className="flex items-center gap-2 sm:gap-3 text-neutral-300 text-[10px] sm:text-xs shrink-0">
             <span className="flex items-center gap-1.5 font-medium">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
               </span>
               <span className="text-emerald-400 font-semibold">Open Now</span>
-              <span className="text-neutral-400 hidden sm:inline">(7:30 AM – 10:30 PM)</span>
+              <span className="text-neutral-400 hidden xs:inline">(7:30 AM – 10:30 PM)</span>
             </span>
 
             <span className="text-neutral-600 hidden md:inline">|</span>
@@ -145,7 +145,7 @@ export default function Navbar({ activeCity, setActiveCity, onOpenBooking, onOpe
           </div>
 
           {/* Right Free Menu Trigger & Hotline */}
-          <div className="flex items-center gap-3.5 text-neutral-300 text-[10px] sm:text-xs shrink-0">
+          <div className="flex items-center gap-2 sm:gap-3.5 text-neutral-300 text-[10px] sm:text-xs shrink-0">
             <button
               onClick={() => setMenuModalOpen(true)}
               className="hidden lg:flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#2A241E] hover:bg-[#383028] text-[#FFEF98] text-[10px] font-bold border border-[#F59E0B]/30 transition-all cursor-pointer"
@@ -160,7 +160,7 @@ export default function Navbar({ activeCity, setActiveCity, onOpenBooking, onOpe
             >
               <Phone className="w-3 h-3 text-[#F59E0B]" />
               <span className="hidden sm:inline">+91 8010632001</span>
-              <span className="sm:hidden">Call</span>
+              <span className="sm:hidden font-medium">Call Desk</span>
             </a>
           </div>
 
@@ -170,12 +170,14 @@ export default function Navbar({ activeCity, setActiveCity, onOpenBooking, onOpe
       {/* ========================================================= */}
       {/* MAIN NAVIGATION BAR WITH CENTERED MIDDLE LOGO             */}
       {/* ========================================================= */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className={`flex items-center justify-between transition-all duration-300 ${scrolled ? 'h-16 sm:h-17' : 'h-18 sm:h-20'}`}>
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+        <div className={`flex items-center justify-between transition-all duration-300 ${scrolled ? 'h-15 sm:h-16' : 'h-16 sm:h-18'}`}>
           
           {/* ======================================================= */}
-          {/* 1. LEFT WING: Short Navigation Links (Desktop)          */}
+          {/* 1. LEFT WING: Short Nav (Desktop) / Hamburger (Mobile)  */}
           {/* ======================================================= */}
+          
+          {/* Desktop Left Wing Links (>= 1280px) */}
           <div className="hidden xl:flex items-center gap-1 flex-1 justify-start">
             <nav 
               className="flex items-center gap-1"
@@ -294,64 +296,55 @@ export default function Navbar({ activeCity, setActiveCity, onOpenBooking, onOpe
             </nav>
           </div>
 
-          {/* Mobile Left: Hamburger + Quick City Pill */}
-          <div className="flex items-center gap-2 xl:hidden">
+          {/* Mobile & Tablet Left: Clean Hamburger Toggle (No duplicate pill on tablet) */}
+          <div className="flex items-center xl:hidden shrink-0">
             <motion.button
-              whileTap={{ scale: 0.9 }}
+              whileTap={{ scale: 0.92 }}
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-neutral-800 hover:text-black rounded-xl hover:bg-[#F4EFE6] transition-colors focus:outline-none cursor-pointer"
+              className="p-2 sm:p-2.5 text-neutral-800 hover:text-black rounded-xl hover:bg-[#F4EFE6] active:bg-[#ECE6DA] transition-colors focus:outline-none cursor-pointer flex items-center justify-center"
               aria-label="Toggle navigation menu"
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {mobileMenuOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
             </motion.button>
-
-            <button
-              onClick={() => setActiveCity(activeCity === 'pune' ? 'nagpur' : 'pune')}
-              className="flex items-center gap-1 px-2.5 py-1 text-[11px] font-bold bg-[#F4EFE6] text-neutral-800 rounded-full border border-[#E3DCD0] active:scale-95 transition-transform cursor-pointer"
-              title="Switch Location"
-            >
-              <MapPin className="w-3 h-3 text-[#F59E0B]" />
-              <span>{activeCity === 'pune' ? 'Pune' : 'Nagpur'}</span>
-            </button>
           </div>
 
           {/* ======================================================= */}
           {/* 2. MIDDLE LOGO LOCKUP (Center Jewel)                    */}
           {/* ======================================================= */}
-          <div className="shrink-0 flex items-center justify-center px-3 sm:px-6">
+          <div className="shrink-0 flex items-center justify-center px-1.5 xs:px-2 sm:px-4 lg:px-6">
             <Link 
               to="/" 
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               className="flex flex-col items-center justify-center group text-center" 
               aria-label="Mauji Home"
             >
-              <div className="flex items-center gap-2 sm:gap-2.5">
+              <div className="flex items-center gap-1.5 xs:gap-2 sm:gap-2.5">
                 <motion.img
                   whileHover={{ scale: 1.04 }}
                   transition={{ type: "spring", stiffness: 400, damping: 20 }}
                   src={publicAsset('images/mauji-logo.png')}
                   alt="Mauji The Time Cafe"
-                  className="h-8 sm:h-9 lg:h-10 w-auto object-contain drop-shadow-xs"
+                  className="h-7 xs:h-8 sm:h-9 lg:h-10 w-auto object-contain drop-shadow-xs"
                 />
-                <div className="w-px h-5 sm:h-6 bg-[#EBE6DC]" />
+                <div className="w-px h-4 xs:h-5 sm:h-6 bg-[#EBE6DC]" />
                 <img
                   src={publicAsset('images/mauji-hindi.png')}
                   alt="मौजी"
-                  className="h-4 sm:h-5 lg:h-5.5 w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity"
+                  className="h-3.5 xs:h-4 sm:h-5 lg:h-5.5 w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity"
                 />
               </div>
-              <span className="text-[9px] font-mono tracking-[0.18em] text-[#B45309] uppercase font-bold mt-0.5">
+              <span className="text-[8px] xs:text-[9px] font-mono tracking-[0.16em] text-[#B45309] uppercase font-bold mt-0.5">
                 पुणे • नागपूर
               </span>
             </Link>
           </div>
 
           {/* ======================================================= */}
-          {/* 3. RIGHT WING: Short Navigation Links & Action Cluster   */}
+          {/* 3. RIGHT WING: Responsive Switcher & Action Cluster     */}
           {/* ======================================================= */}
-          <div className="flex items-center gap-3 lg:gap-5 flex-1 justify-end">
+          <div className="flex items-center gap-1.5 xs:gap-2 sm:gap-3 lg:gap-5 flex-1 justify-end shrink-0">
             
-            {/* Right Nav Links (Desktop) */}
+            {/* Desktop Right Nav Links (>= 1280px) */}
             <nav 
               className="hidden xl:flex items-center gap-1"
               onMouseLeave={() => setHoveredNav(null)}
@@ -383,11 +376,21 @@ export default function Navbar({ activeCity, setActiveCity, onOpenBooking, onOpe
               })}
             </nav>
 
-            {/* Sliding City Pill Switcher (Pune / Nagpur) */}
-            <div className="hidden sm:flex items-center bg-[#F4EFE6] p-1 rounded-full border border-[#E3DCD0] relative shadow-inner">
+            {/* Mobile-Only (<640px) Quick City Pill */}
+            <button
+              onClick={() => setActiveCity(activeCity === 'pune' ? 'nagpur' : 'pune')}
+              className="sm:hidden flex items-center gap-1 px-2 py-1 text-[10.5px] font-bold bg-[#F4EFE6] text-neutral-800 rounded-full border border-[#E3DCD0] active:scale-95 transition-transform cursor-pointer shrink-0"
+              title="Switch Location"
+            >
+              <MapPin className="w-3 h-3 text-[#F59E0B]" />
+              <span>{activeCity === 'pune' ? 'Pune' : 'Nagpur'}</span>
+            </button>
+
+            {/* Tablet & Desktop Dual City Switcher (>= 640px) */}
+            <div className="hidden sm:flex items-center bg-[#F4EFE6] p-1 rounded-full border border-[#E3DCD0] relative shadow-inner shrink-0">
               <button
                 onClick={() => setActiveCity('pune')}
-                className={`relative z-10 flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold rounded-full transition-colors cursor-pointer ${
+                className={`relative z-10 flex items-center gap-1.5 px-2.5 sm:px-3 py-1 sm:py-1.5 text-xs font-bold rounded-full transition-colors cursor-pointer ${
                   activeCity === 'pune' ? 'text-white' : 'text-neutral-600 hover:text-neutral-900'
                 }`}
               >
@@ -396,7 +399,7 @@ export default function Navbar({ activeCity, setActiveCity, onOpenBooking, onOpe
               </button>
               <button
                 onClick={() => setActiveCity('nagpur')}
-                className={`relative z-10 flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold rounded-full transition-colors cursor-pointer ${
+                className={`relative z-10 flex items-center gap-1.5 px-2.5 sm:px-3 py-1 sm:py-1.5 text-xs font-bold rounded-full transition-colors cursor-pointer ${
                   activeCity === 'nagpur' ? 'text-white' : 'text-neutral-600 hover:text-neutral-900'
                 }`}
               >
@@ -418,12 +421,13 @@ export default function Navbar({ activeCity, setActiveCity, onOpenBooking, onOpe
             {/* Primary Action CTA: High-Contrast Rounded Pill Button */}
             <motion.button
               whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.97 }}
+              whileTap={{ scale: 0.95 }}
               onClick={() => handleNavClick('/book')}
-              className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs font-bold text-white bg-[#1A1A1A] hover:bg-black transition-all shadow-sm group cursor-pointer whitespace-nowrap shrink-0"
+              className="inline-flex items-center gap-1.5 xs:gap-2 px-3 xs:px-3.5 sm:px-5 py-1.5 xs:py-2 sm:py-2.5 rounded-full text-[11px] xs:text-xs font-bold text-white bg-[#1A1A1A] hover:bg-black transition-all shadow-xs group cursor-pointer whitespace-nowrap shrink-0"
             >
-              <Laptop className="w-3.5 h-3.5 text-[#F59E0B] group-hover:rotate-6 transition-transform" />
-              <span>Book a Desk</span>
+              <Laptop className="w-3.5 h-3.5 text-[#F59E0B] group-hover:rotate-6 transition-transform shrink-0" />
+              <span className="hidden xs:inline">Book a Desk</span>
+              <span className="xs:hidden">Book</span>
             </motion.button>
 
           </div>
@@ -432,20 +436,20 @@ export default function Navbar({ activeCity, setActiveCity, onOpenBooking, onOpe
       </div>
 
       {/* ========================================================= */}
-      {/* MOBILE FULL-HEIGHT SLIDE DRAWER                           */}
+      {/* MOBILE & TABLET SLIDE DRAWER (Fixed Resolution Guarded)    */}
       {/* ========================================================= */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'calc(100vh - 80px)' }}
+            animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.28, ease: "easeInOut" }}
-            className="xl:hidden border-b border-[#EBE6DC] bg-[#FFFDF9] px-4 pt-3 pb-8 flex flex-col justify-between overflow-y-auto shadow-2xl"
+            transition={{ duration: 0.26, ease: "easeInOut" }}
+            className="xl:hidden border-b border-[#EBE6DC] bg-[#FFFDF9] px-4 pt-3 pb-6 flex flex-col justify-between max-h-[calc(100dvh-4.25rem)] overflow-y-auto shadow-2xl"
           >
             <div className="space-y-4">
               
-              {/* Dual-City Cards */}
+              {/* Dual-City Cards inside Drawer */}
               <div>
                 <div className="text-[10px] font-bold uppercase tracking-wider text-neutral-400 mb-1.5">
                   Select Sanctuary
@@ -497,19 +501,19 @@ export default function Navbar({ activeCity, setActiveCity, onOpenBooking, onOpe
                     <button
                       key={link.label}
                       onClick={() => handleNavClick(link.to, link.hash)}
-                      className={`w-full py-3 px-2 flex items-center justify-between text-left rounded-xl transition-colors cursor-pointer ${
+                      className={`w-full py-2.5 sm:py-3 px-2 flex items-center justify-between text-left rounded-xl transition-colors cursor-pointer ${
                         isActive 
                           ? 'bg-[#FFEF98]/30 font-bold text-[#B45309]' 
-                          : 'hover:bg-[#F7F4EB] text-neutral-800'
+                          : 'hover:bg-[#F7F4EB] active:bg-[#ECE6DA] text-neutral-800'
                       }`}
                     >
                       <div className="flex items-center gap-3">
-                        <div className={`p-2 rounded-xl ${
+                        <div className={`p-2 rounded-xl shrink-0 ${
                           link.highlight ? 'bg-[#FFEF98] text-[#B45309]' : 'bg-[#F4EFE6] text-neutral-600'
                         }`}>
                           <Icon className="w-4 h-4" />
                         </div>
-                        <span className={`text-sm ${link.highlight ? 'font-bold text-[#B45309]' : 'font-medium'}`}>
+                        <span className={`text-xs sm:text-sm ${link.highlight ? 'font-bold text-[#B45309]' : 'font-medium'}`}>
                           {link.label}
                         </span>
                       </div>
@@ -529,14 +533,14 @@ export default function Navbar({ activeCity, setActiveCity, onOpenBooking, onOpe
 
             </div>
 
-            {/* Mobile Bottom Actions */}
-            <div className="pt-6 space-y-3 border-t border-[#EBE6DC]">
+            {/* Mobile Drawer Bottom Actions */}
+            <div className="pt-5 space-y-2.5 border-t border-[#EBE6DC] mt-4">
               <button
                 onClick={() => {
                   setMobileMenuOpen(false);
                   handleNavClick('/book');
                 }}
-                className="w-full py-3.5 rounded-2xl bg-[#1A1A1A] hover:bg-black text-white font-bold text-xs flex items-center justify-center gap-2 shadow-md cursor-pointer transition-all"
+                className="w-full py-3 sm:py-3.5 rounded-2xl bg-[#1A1A1A] hover:bg-black text-white font-bold text-xs flex items-center justify-center gap-2 shadow-sm cursor-pointer transition-all active:scale-[0.99]"
               >
                 <Laptop className="w-4 h-4 text-[#F59E0B]" />
                 <span>Reserve a Desk Pass</span>
@@ -544,8 +548,8 @@ export default function Navbar({ activeCity, setActiveCity, onOpenBooking, onOpe
 
               <div className="grid grid-cols-2 gap-2">
                 <a
-                  href={`tel:${maujiData.locations[activeCity].phone}`}
-                  className="py-2.5 px-3 rounded-xl bg-white border border-[#EBE6DC] text-neutral-800 font-bold text-xs flex items-center justify-center gap-1.5"
+                  href={`tel:${maujiData.locations[activeCity]?.phone || '+918010632001'}`}
+                  className="py-2.5 px-3 rounded-xl bg-white border border-[#EBE6DC] text-neutral-800 font-bold text-xs flex items-center justify-center gap-1.5 active:bg-neutral-50"
                 >
                   <Phone className="w-3.5 h-3.5 text-[#B45309]" />
                   <span>Call Desk</span>
@@ -554,7 +558,7 @@ export default function Navbar({ activeCity, setActiveCity, onOpenBooking, onOpe
                   href="https://wa.me/918010632001?text=Hi%20Mauji!%20I%20would%20like%20to%20reserve%20a%20seat"
                   target="_blank"
                   rel="noreferrer"
-                  className="py-2.5 px-3 rounded-xl bg-[#25D366]/10 text-emerald-800 font-bold text-xs flex items-center justify-center gap-1.5 border border-[#25D366]/30"
+                  className="py-2.5 px-3 rounded-xl bg-[#25D366]/10 text-emerald-800 font-bold text-xs flex items-center justify-center gap-1.5 border border-[#25D366]/30 active:bg-[#25D366]/20"
                 >
                   <MessageCircle className="w-3.5 h-3.5 text-[#25D366]" />
                   <span>WhatsApp</span>
@@ -581,6 +585,7 @@ export default function Navbar({ activeCity, setActiveCity, onOpenBooking, onOpe
               <button
                 onClick={() => setMenuModalOpen(false)}
                 className="absolute top-5 right-5 w-8 h-8 rounded-full bg-neutral-100 hover:bg-neutral-200 flex items-center justify-center text-neutral-600 transition-colors cursor-pointer"
+                aria-label="Close modal"
               >
                 <X className="w-4 h-4" />
               </button>

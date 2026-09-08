@@ -387,18 +387,24 @@ export default function Footer() {
           
           {/* Brand & Manifesto Column */}
           <div className="col-span-2 md:col-span-4 space-y-4 pr-0 md:pr-6">
-            <div className="flex items-center gap-3">
-              <img 
-                src={publicAsset('images/mauji-logo.png')}
-                alt="Mauji Logo" 
-                className="h-10 w-auto object-contain brightness-110 drop-shadow-md"
-              />
-              <img 
-                src={publicAsset('images/mauji-hindi.png')}
-                alt="माउजी" 
-                className="h-7 w-auto object-contain opacity-90 invert"
-              />
+            <div className="flex items-center gap-3 relative">
+              {/* Warm ambient glow behind logos for premium effect */}
+              <div className="absolute -inset-3 bg-gradient-to-r from-[#F59E0B]/10 via-[#FFEF98]/6 to-transparent rounded-2xl blur-xl pointer-events-none" />
+              <div className="relative flex items-center gap-3 px-3 py-2 rounded-xl bg-gradient-to-r from-neutral-800/60 to-transparent border border-neutral-700/40">
+                <img 
+                  src={publicAsset('images/mauji-logo.png')}
+                  alt="Mauji Logo" 
+                  className="h-10 w-auto object-contain invert brightness-200 drop-shadow-[0_0_8px_rgba(255,239,152,0.3)]"
+                />
+                <div className="w-px h-6 bg-gradient-to-b from-transparent via-[#F59E0B]/40 to-transparent" />
+                <img 
+                  src={publicAsset('images/mauji-hindi.png')}
+                  alt="माउजी" 
+                  className="h-7 w-auto object-contain invert brightness-200 opacity-90 drop-shadow-[0_0_8px_rgba(255,239,152,0.2)]"
+                />
+              </div>
             </div>
+
             
             <p className="text-neutral-400 text-xs leading-relaxed">
               India's first & largest Time Cafe. A design-driven sanctuary for unhurried conversations, unlimited craft beverages, creative production, and soulful community.
