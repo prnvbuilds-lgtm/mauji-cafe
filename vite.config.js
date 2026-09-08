@@ -3,6 +3,8 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
+  // GitHub Pages hosts project sites beneath the repository name.
+  base: process.env.GITHUB_ACTIONS ? '/mauji-cafe/' : '/',
   plugins: [react()],
   server: {
     port: 5173,
