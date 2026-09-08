@@ -1,0 +1,242 @@
+{
+  "brand": {
+    "name": "Mauji Time Cafe & Spaces",
+    "tagline": "An ode to slow living — Be yourself, be a Mauji",
+    "mission": "India's first & biggest Time Cafe. A sanctuary where you pay for time, not coffee, with unlimited craft beverages, high-speed Wi-Fi, and a judgment-free community environment.",
+    "founded": 2020,
+    "founder": "Vandit Purohit",
+    "parentEntities": ["Trawork LLP", "CreativeShala LLP", "Third Space Hospitality and Space Solution Pvt. Ltd."],
+    "locations": {
+      "pune": {
+        "city": "Pune",
+        "title": "Mauji Pune Flagship",
+        "area": "Bhosale Nagar / Senapati Bapat Road",
+        "address": "11, Sahajeevan Society, Bhosale Nagar, Pune, Maharashtra 411007",
+        "phone": "+91 8010632001",
+        "email": "pune@maujicafe.com",
+        "hours": "7:30 AM – 10:30 PM (Daily)",
+        "features": ["Garden Courtyard", "Podcast Studio", "Pottery & Maker Workshop", "Co-working Desks", "Private Meeting Rooms", "Art Gallery"]
+      },
+      "nagpur": {
+        "city": "Nagpur",
+        "title": "Mauji Nagpur Space",
+        "area": "Laxmi Nagar",
+        "address": "Laxmi Nagar, Nagpur, Maharashtra 440022",
+        "phone": "+91 8010632001",
+        "email": "nagpur@maujicafe.com",
+        "hours": "8:00 AM – 10:00 PM (Daily)",
+        "features": ["Community Lounge", "Creator Corner", "Open Mic Stage", "Quiet Reading Zones", "Artisan Brew Bar"]
+      }
+    },
+    "colors": {
+      "creamBackground": "#FFFDF9",
+      "sparklerYellow": "#FFEF98",
+      "warmGold": "#F59E0B",
+      "armorWash": "#040404",
+      "verifiedBlack": "#242424",
+      "terracotta": "#F05B29",
+      "mutedBorder": "#E5E7EB"
+    },
+    "pricing": {
+      "timeCafeHourly": {
+        "rate": 210,
+        "unit": "per hour",
+        "includes": [
+          "Unlimited freshly brewed hot & cold beverages (Cappuccino, Cold Brew, Herbal Teas, etc.)",
+          "Complimentary light savory snacks",
+          "High-speed 300+ Mbps Wi-Fi & power at every table",
+          "BYO Food friendly (Bring home-cooked meals or order via Zomato/Swiggy without surcharge)",
+          "Access to curated library & board games"
+        ]
+      },
+      "studioSpace": {
+        "rate": 1500,
+        "unit": "per hour",
+        "includes": [
+          "Acoustically treated podcast & video production room",
+          "Studio lights, mic setups & tripods",
+          "High-speed wired upload line",
+          "Complimentary beverage service for shoot crew"
+        ]
+      },
+      "eventSpace": {
+        "rate": 1500,
+        "unit": "per hour",
+        "includes": [
+          "Customizable seating for 20-60 attendees",
+          "AV projector, sound system & handheld mics",
+          "Marketing broadcast on Mauji community WhatsApp & Instagram channels",
+          "Logistical & host setup support"
+        ]
+      },
+      "monthlyMembership": {
+        "rate": 10000,
+        "unit": "per month",
+        "includes": [
+          "Unlimited monthly hours & priority desk reservation",
+          "Unlimited beverages & daily artisanal snacks",
+          "5 hours of free Studio/Meeting room credits monthly",
+          "Free entry or discounted VIP access to all Mauji community workshops & events",
+          "Official Mauji Community Directory access"
+        ]
+      },
+      "dayPass": {
+        "rate": 899,
+        "unit": "full day (up to 10 hours)",
+        "includes": [
+          "Full day access with come-and-go flexibility",
+          "Unlimited beverages throughout the day",
+          "Power backup & ergonomic workspace"
+        ]
+      }
+    },
+    "eightElements": [
+      {
+        "id": "time-cafe",
+        "title": "The Time Cafe",
+        "tag": "Slow Living",
+        "short": "Pay strictly for the time you spend. Enjoy unlimited beverages & Wi-Fi without waiter pressure.",
+        "details": "No hurry, no need to keep ordering coffees just to hold a table. Relax, read, or catch up with peers in a comforting, unhurried sanctuary.",
+        "icon": "Clock"
+      },
+      {
+        "id": "workspace",
+        "title": "Workspace & Coworking",
+        "tag": "Productivity",
+        "short": "Thoughtfully designed for freelancers, remote engineers, and creative small teams.",
+        "details": "Ergonomic seating, surge-protected power plugs at every desk, quiet focus zones, and collaborative discussion tables.",
+        "icon": "Laptop"
+      },
+      {
+        "id": "studio",
+        "title": "Creator Studio",
+        "tag": "Media & Content",
+        "short": "Dedicated creator playground for podcasts, photo shoots, and reels.",
+        "details": "Equipped with customizable backdrops, acoustic dampening, dynamic studio lighting, and high-speed upload connections.",
+        "icon": "Mic"
+      },
+      {
+        "id": "event-spaces",
+        "title": "Event Spaces",
+        "tag": "Culture & Gatherings",
+        "short": "Host book launches, music gigs, poetry open mics, and art workshops.",
+        "details": "Versatile indoor and courtyard stages with complete AV support and co-marketing to thousands of Pune & Nagpur patrons.",
+        "icon": "Calendar"
+      },
+      {
+        "id": "art-store",
+        "title": "The Art Store",
+        "tag": "Local Artisans",
+        "short": "A creative boutique marketplace where independent creators showcase and sell their creations.",
+        "details": "From handmade pottery, scented candles, and illustrated prints to stationery — 100% curated from indie artists.",
+        "icon": "Palette"
+      },
+      {
+        "id": "library",
+        "title": "Curated Library",
+        "tag": "Mind & Soul",
+        "short": "Over 500+ curated volumes ranging from classic literature to design and entrepreneurship.",
+        "details": "Curated from the founder's personal collection and community book-swap donations. Cosy reading armchairs included.",
+        "icon": "BookOpen"
+      },
+      {
+        "id": "maker-space",
+        "title": "Maker Space",
+        "tag": "Hands-on Craft",
+        "short": "A hands-on workshop equipped for pottery, clay modeling, prototyping, and DIY crafts.",
+        "details": "Featuring pottery wheels, sculpting tools, and raw materials. Regular weekend beginner workshops conducted.",
+        "icon": "Hammer"
+      },
+      {
+        "id": "kitchen",
+        "title": "The Kitchen",
+        "tag": "Culinary Flavors",
+        "short": "Gourmet, wholesome comfort food crafted fresh with premium ingredients.",
+        "details": "Artisanal sourdough toasts, hand-rolled pastas, wholesome bowls, and specialty desserts. Plus, BYO home-cooked meals are always welcome.",
+        "icon": "Utensils"
+      }
+    ],
+    "mediaPress": [
+      {
+        "name": "The Times of India",
+        "quote": "Mauji is revolutionizing Pune's cafe culture with its radical pay-by-the-hour anti-cafe model.",
+        "badge": "TOI"
+      },
+      {
+        "name": "The Indian Express",
+        "quote": "A true sanctuary for creators, freelancers and slow-living enthusiasts.",
+        "badge": "Indian Express"
+      },
+      {
+        "name": "LBB (Little Black Book)",
+        "quote": "Pune's biggest time cafe where your creative thoughts flow freely over endless cappuccinos.",
+        "badge": "LBB Pune"
+      },
+      {
+        "name": "WhatsHot Pune",
+        "quote": "An unmissable aesthetic paradise that combines co-working, studios, and soulful events.",
+        "badge": "WhatsHot"
+      }
+    ],
+    "featuredEvents": [
+      {
+        "id": "evt-1",
+        "title": "Swifties Acoustic Night & Watch Party",
+        "date": "This Saturday • 7:00 PM",
+        "city": "Pune",
+        "price": "₹399 (Incl. unlimited beverage pass)",
+        "category": "Music & Community",
+        "seatsLeft": 6
+      },
+      {
+        "id": "evt-2",
+        "title": "Business Shower: Celebrating Indie Founders",
+        "date": "Sunday • 5:00 PM",
+        "city": "Pune",
+        "price": "Free RSVP",
+        "category": "Startups & Networking",
+        "seatsLeft": 12
+      },
+      {
+        "id": "evt-3",
+        "title": "Hand-Building Pottery & Glazing Workshop",
+        "date": "Next Saturday • 11:00 AM",
+        "city": "Nagpur",
+        "price": "₹1,200 (All materials & kiln fire incl.)",
+        "category": "Art & Craft",
+        "seatsLeft": 4
+      },
+      {
+        "id": "evt-4",
+        "title": "Nazm: Poetry & Acoustic Open Mic",
+        "date": "Next Sunday • 6:30 PM",
+        "city": "Nagpur",
+        "price": "₹250",
+        "category": "Performing Arts",
+        "seatsLeft": 8
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How exactly does the Time Cafe work?",
+        "a": "When you walk into Mauji, scan the QR code at reception to check in. Your time counter starts in your web dashboard. While inside, enjoy unlimited artisanal coffees, teas, snacks, high-speed Wi-Fi, and library access. When leaving, hit check out and pay cashless via UPI or card for the exact duration spent (@ ₹210/hr)."
+      },
+      {
+        "q": "Can I bring my own food (BYO)?",
+        "a": "Yes! Mauji is a BYO cafe. You are encouraged to bring your mom's tiffin, homemade meals, or order food via food delivery apps to our table. We never penalize you for bringing your own food."
+      },
+      {
+        "q": "Is Wi-Fi and unlimited coffee really included in ₹210/hr?",
+        "a": "Yes, 100% included! There are no hidden charges. Hot cappuccinos, pour-overs, iced teas, Wi-Fi, and power ports are all covered by your hourly time pass."
+      },
+      {
+        "q": "How can I book the podcast/shoot studio or event space?",
+        "a": "You can book directly via our online booking engine on this website, or connect with our community team via WhatsApp/Phone at +91 8010632001 or email pune@maujicafe.com."
+      },
+      {
+        "q": "Do you offer monthly memberships for freelancers?",
+        "a": "Yes! Our Monthly Pass starts at ₹10,000/month, giving you unlimited desk hours, free studio meeting credits, priority workshop tickets, and endless brews."
+      }
+    ]
+  }
+}

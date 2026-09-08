@@ -1,0 +1,64 @@
+{
+  "competitorAnalysis": {
+    "title": "Competitive Landscape & Mauji Unique Moat",
+    "benchmarks": [
+      {
+        "name": "Kiosk Kaffee",
+        "website": "kiosk-kaffee.com",
+        "techStack": "WordPress + Elementor + WooCommerce plugins",
+        "businessModel": "High-velocity Grab-and-Go Kiosk Franchise. Monetizes per beverage cup (₹90 - ₹220).",
+        "digitalExperience": "Basic e-commerce brochure with franchise inquiry forms. Slow performance (~4.2s mobile load), heavy plugin overhead, zero customer time/booking interaction.",
+        "limitations": "No concept of time spent, zero co-working or studio infrastructure, purely transactional, sterile customer engagement.",
+        "maujiDifferentiation": "Mauji does not sell disposable cups in a hurry — Mauji sells 'the luxury of time & creative belonging'. Mauji's digital product must feature live check-in, real-time rate calculators, studio bookings, and community event RSVPs which Elementor struggles to do without bloating."
+      },
+      {
+        "name": "Third Wave Coffee / Blue Tokai",
+        "website": "thirdwavecoffee.in / bluetokaicoffee.com",
+        "techStack": "Custom Shopify Plus / Next.js Headless & Mobile App",
+        "businessModel": "Specialty cafe chain + D2C bean subscription. High cup price (₹250 - ₹380 per cup). Customers buying 2 coffees pay ₹550+ just to sit for 2 hours.",
+        "digitalExperience": "Modern polished D2C storefront and loyalty app. Great aesthetics but entirely focused on beverage commerce.",
+        "limitations": "No workspace guarantees, unstable Wi-Fi at busy times, waiters repeatedly prompt customers to order more, awkward for 6-hour work sessions.",
+        "maujiDifferentiation": "At Mauji, 2 hours of unlimited specialty brews + snacks + guaranteed power desk costs only ₹420 (saving money compared to Blue Tokai), with zero guilt or waiter interruptions."
+      },
+      {
+        "name": "GoFloaters / MyHQ / WeWork",
+        "techStack": "Custom React / Native Mobile Apps",
+        "businessModel": "Corporate desk aggregation & monthly flexible office space. Day passes typically ₹400 - ₹900 without artisanal cafe experience.",
+        "digitalExperience": "Functional booking engines, corporate feel, transactional UI.",
+        "limitations": "Sterile corporate ambiance, no bohemian community warmth, average instant coffee vending machines, strict corporate timings.",
+        "maujiDifferentiation": "Mauji bridges the warmth of an artisanal bohemian coffeehouse with the productivity of a modern co-working sanctuary, plus creator podcast studios and weekend pottery/art events."
+      }
+    ],
+    "techStackDecisionMatrix": {
+      "options": [
+        {
+          "stack": "WordPress + Elementor",
+          "cost": "Low Initial (₹15,000 - ₹25,000)",
+          "speedToLaunch": "Fast (1-2 weeks)",
+          "pagePerformance": "Poor (Lighthouse 35-55 on mobile due to heavy DOM & plugin scripts)",
+          "interactiveCapabilities": "Very Limited (requires custom PHP/AJAX for check-in dashboards & calculators)",
+          "securityMaintenance": "High Maintenance (plugin updates, vulnerability patching)",
+          "verdict": "Suitable for simple coffee menu brochures, but fails to handle Mauji's hybrid Time Cafe check-in, live rate calculations, and dynamic AI assistant."
+        },
+        {
+          "stack": "Headless Custom React / Next.js / Vite + Tailwind CSS",
+          "cost": "Value / High ROI (₹35,000 - ₹55,000)",
+          "speedToLaunch": "Fast with modern component libraries (1-2 weeks)",
+          "pagePerformance": "Ultra High (Lighthouse 95-100, sub-second loads, instant page transitions)",
+          "interactiveCapabilities": "Unlimited (Native interactive calculators, QR check-in dashboard, AI Chatbot widget, instant city switching)",
+          "securityMaintenance": "Near Zero (No WordPress database attack vectors, static CDN hosting)",
+          "verdict": "Recommended! Gives Mauji a world-class, premium feel that matches international boutique hospitality brands like Ace Hotel & anti-cafe pioneers."
+        },
+        {
+          "stack": "Flutter Web",
+          "cost": "High (₹45,000 - ₹75,000)",
+          "speedToLaunch": "Moderate",
+          "pagePerformance": "Poor SEO indexation, heavy initial CanvasKit WASM download (3-5MB bundle), clunky text selection on web browsers.",
+          "interactiveCapabilities": "High, but poor for mobile web discovery.",
+          "securityMaintenance": "Low",
+          "verdict": "Great for iOS/Android apps, but unsuitable as primary marketing and booking website where SEO and instant mobile web discovery are critical."
+        }
+      ]
+    }
+  }
+}
